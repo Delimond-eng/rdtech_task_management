@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string("libelle");
             $table->text("description")->nullable();
             $table->foreignId('activite_id')->nullable()->constrained('activities')->nullOnDelete();
-            $table->foreignId('agent_id')->constrained('agents')->nullOnDelete();
-            $table->text("status")->default("actif");
+            $table->foreignId('agent_id')->nullable()->constrained('agents')->nullOnDelete();
+            $table->string("status")->default("actif");
             $table->timestamps();
         });
     }

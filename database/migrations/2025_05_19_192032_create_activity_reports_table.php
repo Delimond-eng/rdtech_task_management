@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('activity_reports', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('agent_id')->constrained('agents')->nullOnDelete();
-            $table->foreignId('activity_id')->constrained('activity_reports')->nullOnDelete();
+            $table->foreignId('agent_id')->nullable()->constrained('agents')->nullOnDelete();
+            $table->foreignId('activity_id')->nullable()->constrained('activity_reports')->nullOnDelete();
             $table->foreignId('site_id')->nullable()->constrained("sites")->nullOnDelete();
             $table->date("date")->useCurrent();
             $table->text("commentaire")->nullable();

@@ -46,7 +46,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/taches', [AdminController::class, 'listTaches']);
     Route::get('/activity-reports', [AdminController::class, 'listActivityReports']);
 
-
     // === CRUD ===
     Route::post('/agent.create', [AdminController::class, 'saveAgent']);
     Route::post('/site.create', [AdminController::class, 'saveSite']);
