@@ -35,6 +35,12 @@
                         <li class="slide"> <a href="#" class="side-menu__item">Rapport des activités</a> </li>
                     </ul>
                 </li>
+
+                <li class="slide">
+                    <a href="{{ url("/agents.page") }}" class="side-menu__item {{ Route::is('agents.page') ? 'active' : '' }}"> <i class="bx bx-group side-menu__icon"></i> 
+                        <span class="side-menu__label">Gestion des agents</span> 
+                    </a>
+                </li>
                 <!-- End::slide -->
                 <li class="slide">
                     <a href="#" class="side-menu__item"> <i class="bx bx-calendar-check side-menu__icon"></i> 
@@ -48,11 +54,7 @@
                     </a>
                 </li>
 
-                <li class="slide">
-                    <a href="#" class="side-menu__item"> <i class="bx bx-group side-menu__icon"></i> 
-                        <span class="side-menu__label">Gestion des agents</span> 
-                    </a>
-                </li>
+                
 
                 <!-- Start::slide__category -->
                  @if (Auth::user()->role=="admin")

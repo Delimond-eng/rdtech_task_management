@@ -26,6 +26,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
 
+
+    // === VIEW ===
+    Route::view("/agents.page", "agents")->name("agents.page");
+
     // === Accueil ===
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
